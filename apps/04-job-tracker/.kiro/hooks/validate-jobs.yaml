@@ -1,0 +1,13 @@
+name: validate-job-fields
+description: Checks that all required job fields are validated before saving
+trigger:
+  event: file.saved
+  pattern: "app.js"
+instructions: >
+  Review the saveJob() function in app.js.
+  Verify that company and role are validated as non-empty before saving.
+  Check that dateApplied defaults to today's date if not provided.
+  Verify status is one of the allowed values: Applied, Phone Screen, Technical Interview,
+  Final Round, Offer, Rejected, Withdrawn.
+  Report any missing validations. Do not modify files.
+approval: auto

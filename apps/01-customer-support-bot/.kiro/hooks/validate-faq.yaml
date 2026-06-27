@@ -1,0 +1,10 @@
+name: validate-faq-json
+description: Validates faq.json is valid JSON every time a JS file is saved
+trigger:
+  event: file.saved
+  pattern: "**/*.js"
+instructions: >
+  Check that faq.json in the project root is valid JSON.
+  If it is invalid, report the exact line and character where the error occurs.
+  Do not modify any files — only report the error in the chat.
+approval: auto

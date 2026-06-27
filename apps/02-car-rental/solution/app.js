@@ -3,6 +3,15 @@ let allCars = [];
 let selectedCar = null;
 let activeFilter = 'All';
 
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 function getBookings() {
   return JSON.parse(localStorage.getItem(BOOKINGS_KEY) || '[]');
 }
@@ -163,11 +172,11 @@ function renderBookings() {
   list.innerHTML = bookings.map(b => `
     <div class="booking-card">
       <div class="booking-info">
-        <div class="booking-car">${b.carIcon} ${b.carName}</div>
+        <div class="booking-car">${b.carIcon} ${escHtml(b.carName)}</div>
         <div class="booking-meta">
-          <span>👤 ${b.customerName}</span>
+          <span>👤 ${escHtml(b.customerName)}</span>
           <span>📅 ${formatDate(b.pickupDate)} → ${formatDate(b.returnDate)}</span>
-          <span>📍 ${b.location}</span>
+          <span>📍 ${escHtml(b.location)}</span>
           <span>🗓 ${b.days} day${b.days > 1 ? 's' : ''}</span>
         </div>
         <div class="booking-id">Booking ID: ${b.bookingId}</div>

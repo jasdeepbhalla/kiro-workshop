@@ -1,0 +1,11 @@
+name: validate-cars-json
+description: Validates cars.json structure whenever app.js is saved
+trigger:
+  event: file.saved
+  pattern: "app.js"
+instructions: >
+  Check that cars.json in the project root is valid JSON and that every car object
+  has the required fields: id, name, type, icon, pricePerDay, seats, transmission,
+  fuel, features (array), available (boolean).
+  Report any missing or malformed fields. Do not modify files.
+approval: auto

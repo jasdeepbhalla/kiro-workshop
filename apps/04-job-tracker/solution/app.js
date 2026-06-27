@@ -1,6 +1,15 @@
 const JOBS_KEY = 'kiro_jobs';
 let activeFilter = 'All';
 
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
 const STATUS_CLASSES = {
   'Applied': 'status-Applied',
   'Phone Screen': 'status-Phone-Screen',
@@ -70,15 +79,15 @@ function renderJobs() {
   empty.style.display = 'none';
   list.innerHTML = jobs.map(job => {
     const salaryStr = formatSalary(job.salaryMin, job.salaryMax);
-    const notesPreview = job.notes ? job.notes.substring(0, 80) + (job.notes.length > 80 ? '...' : '') : '';
+    const notesPreview = job.notes ? escHtml(job.notes.substring(0, 80)) + (job.notes.length > 80 ? '...' : '') : '';
     const statusClass = STATUS_CLASSES[job.status] || 'status-Applied';
 
     return `
       <div class="job-card" data-id="${job.id}">
         <div class="job-card-main">
           <div class="job-info-left">
-            <div class="job-company">${job.company}</div>
-            <div class="job-role">${job.role}</div>
+            <div class="job-company">${escHtml(job.company)}</div>
+            <div class="job-role">${escHtml(job.role)}</div>
           </div>
           <div class="job-meta">
             <span class="status-badge ${statusClass}">${job.status}</span>
@@ -90,7 +99,7 @@ function renderJobs() {
         </div>
         <div class="job-expanded">
           <div class="expanded-grid">
-            <div class="expanded-notes">${job.notes || '<span style="color:#444">No notes.</span>'}</div>
+            <div class="expanded-notes">${job.notes ? escHtml(job.notes) : '<span style="color:#444">No notes.</span>'}</div>
             <div class="expanded-actions">
               <select class="status-select" data-id="${job.id}">
                 ${['Applied','Phone Screen','Technical Interview','Final Round','Offer','Rejected','Withdrawn']

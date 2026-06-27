@@ -1,0 +1,11 @@
+name: check-storage-keys
+description: Verifies localStorage key names are consistent whenever app.js is saved
+trigger:
+  event: file.saved
+  pattern: "app.js"
+instructions: >
+  Scan app.js for all localStorage.getItem and localStorage.setItem calls.
+  Verify they all use the constants HABITS_KEY and COMPLETIONS_KEY defined at the top of the file.
+  Flag any hardcoded string keys that bypass the constants.
+  Do not modify files — only report findings.
+approval: auto
