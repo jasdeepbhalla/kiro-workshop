@@ -1,0 +1,12 @@
+[
+  {"id":1,"name":"Toyota Camry","type":"Sedan","icon":"🚗","pricePerDay":45,"seats":5,"transmission":"Automatic","fuel":"Gasoline","features":["Bluetooth","Backup Camera","AC"],"available":true},
+  {"id":2,"name":"Honda CR-V","type":"SUV","icon":"🚙","pricePerDay":65,"seats":5,"transmission":"Automatic","fuel":"Gasoline","features":["AWD","Apple CarPlay","Heated Seats"],"available":true},
+  {"id":3,"name":"BMW 3 Series","type":"Luxury","icon":"🏎️","pricePerDay":120,"seats":5,"transmission":"Automatic","fuel":"Gasoline","features":["Leather Seats","Navigation","Sunroof"],"available":true},
+  {"id":4,"name":"Tesla Model 3","type":"Electric","icon":"⚡","pricePerDay":95,"seats":5,"transmission":"Automatic","fuel":"Electric","features":["Autopilot","Supercharging","15\" Screen"],"available":true},
+  {"id":5,"name":"Ford Mustang","type":"Sedan","icon":"🐎","pricePerDay":85,"seats":4,"transmission":"Manual","fuel":"Gasoline","features":["V8 Engine","Sport Mode","Premium Audio"],"available":false},
+  {"id":6,"name":"Toyota RAV4 Hybrid","type":"SUV","icon":"🌿","pricePerDay":75,"seats":5,"transmission":"Automatic","fuel":"Hybrid","features":["AWD","Lane Assist","Hybrid Power"],"available":true},
+  {"id":7,"name":"Mercedes S-Class","type":"Luxury","icon":"💎","pricePerDay":180,"seats":5,"transmission":"Automatic","fuel":"Gasoline","features":["Massage Seats","Night Vision","Premium Sound"],"available":true},
+  {"id":8,"name":"Chevrolet Spark","type":"Sedan","icon":"🐝","pricePerDay":30,"seats":4,"transmission":"Automatic","fuel":"Gasoline","features":["Compact","Fuel Efficient","Easy Parking"],"available":true},
+  {"id":9,"name":"Tesla Model Y","type":"Electric","icon":"⚡","pricePerDay":110,"seats":7,"transmission":"Automatic","fuel":"Electric","features":["Full Self-Driving","7 Seats","Panoramic Roof"],"available":true},
+  {"id":10,"name":"Jeep Wrangler","type":"SUV","icon":"🏔️","pricePerDay":90,"seats":5,"transmission":"Manual","fuel":"Gasoline","features":["4x4","Off-Road","Removable Top"],"available":true}
+]

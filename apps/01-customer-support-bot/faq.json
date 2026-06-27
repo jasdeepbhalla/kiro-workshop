@@ -1,0 +1,74 @@
+[
+  {
+    "question": "What is Kiro?",
+    "answer": "Kiro is an AI-powered IDE from AWS that helps you go from idea to working app using Specs, Steering files, Hooks, and an agentic coding assistant."
+  },
+  {
+    "question": "How do I install Kiro?",
+    "answer": "Download Kiro from kiro.dev. For the CLI, run: curl -fsSL https://cli.kiro.dev/install | bash"
+  },
+  {
+    "question": "What is a steering file?",
+    "answer": "A steering file lives in .kiro/steering/ and sets rules the AI follows across your entire project — your preferred tech stack, naming conventions, and coding standards."
+  },
+  {
+    "question": "What is a spec?",
+    "answer": "A spec is a structured plan Kiro generates from your description. It includes requirements, design decisions, and a task list the agent uses to build your feature."
+  },
+  {
+    "question": "How do hooks work?",
+    "answer": "Hooks are automated actions triggered by file events. For example, every time you save a file, a hook can run your linter or auto-generate documentation."
+  },
+  {
+    "question": "What is MCP?",
+    "answer": "MCP stands for Model Context Protocol. It lets Kiro connect to external tools like GitHub, databases, or APIs so the AI can read and act on real live data."
+  },
+  {
+    "question": "What is agent mode?",
+    "answer": "Agent mode lets Kiro autonomously implement entire features from your spec — creating multiple files, writing logic, and wiring everything together without step-by-step prompting."
+  },
+  {
+    "question": "How is Kiro different from Copilot?",
+    "answer": "GitHub Copilot completes code line by line. Kiro goes further: Specs plan entire features upfront, Hooks automate your workflow, and Agent builds multiple files at once."
+  },
+  {
+    "question": "Is Kiro free?",
+    "answer": "Kiro has a free tier available. Check kiro.dev for current pricing and plan details."
+  },
+  {
+    "question": "What languages does Kiro support?",
+    "answer": "Kiro supports all major programming languages including Python, TypeScript, JavaScript, Java, Go, Rust, C++, and more."
+  },
+  {
+    "question": "What is inline completion?",
+    "answer": "Inline completion is Kiro predicting and suggesting the next lines of code as you type — not just one line but entire functions and logic blocks."
+  },
+  {
+    "question": "Where can I find the workshop materials?",
+    "answer": "All workshop materials including slides, the demo app, and the reference guide are available in the repository shared by the speaker."
+  },
+  {
+    "question": "Who is the speaker?",
+    "answer": "The session is presented by Jasdeep Singh Bhalla, Senior Software Engineer at GoDaddy and AWS Community Builder."
+  },
+  {
+    "question": "What is AWS?",
+    "answer": "AWS stands for Amazon Web Services — a cloud platform offering 200+ services including compute, storage, databases, AI, and developer tools like Kiro."
+  },
+  {
+    "question": "How do I get started with Kiro?",
+    "answer": "Download Kiro from kiro.dev, sign in with your AWS Builder ID, open any project folder, and describe what you want to build in one sentence to create your first spec."
+  },
+  {
+    "question": "What is an AWS Builder ID?",
+    "answer": "An AWS Builder ID is a free account that gives you access to AWS developer tools including Kiro, CodeCatalyst, and re:Post. Sign up at community.aws."
+  },
+  {
+    "question": "Can I use Kiro with my existing project?",
+    "answer": "Yes. Open any existing project folder in Kiro and add a steering file to set your conventions. Kiro will work within your existing codebase."
+  },
+  {
+    "question": "What is the difference between chat and agent mode?",
+    "answer": "Chat lets you ask questions and get answers or code snippets. Agent mode takes action — it reads your spec and actually creates, edits, and wires up files in your project."
+  }
+]

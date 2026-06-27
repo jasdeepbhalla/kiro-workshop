@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiro Job Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">💼 Job Tracker</div>
+      <button class="add-btn" id="addJobBtn">+ Add Application</button>
+    </div>
+  </header>
+
+  <div class="stats-bar" id="statsBar">
+    <div class="stat-item">
+      <div class="stat-num" id="statTotal">0</div>
+      <div class="stat-label">Total</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" id="statActive">0</div>
+      <div class="stat-label">Active</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" id="statInterviews">0</div>
+      <div class="stat-label">Interviews</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" id="statOffers">0</div>
+      <div class="stat-label">Offers</div>
+    </div>
+  </div>
+
+  <div class="filter-tabs" id="filterTabs">
+    <button class="filter-tab active" data-filter="All">All</button>
+    <button class="filter-tab" data-filter="Active">Active</button>
+    <button class="filter-tab" data-filter="Interviews">Interviews</button>
+    <button class="filter-tab" data-filter="Offers">Offers</button>
+    <button class="filter-tab" data-filter="Rejected">Rejected</button>
+  </div>
+
+  <main class="main">
+    <div class="jobs-list" id="jobsList"></div>
+    <div class="empty-state" id="emptyState" style="display:none">
+      <div class="empty-icon">💼</div>
+      <div class="empty-title">No applications yet</div>
+      <div class="empty-sub">Click "Add Application" to start tracking your job search.</div>
+    </div>
+  </main>
+
+  <!-- Add/Edit Modal -->
+  <div class="modal-overlay" id="modalOverlay" style="display:none">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">Add Application</div>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Company</label>
+            <input type="text" id="jobCompany" placeholder="e.g. Stripe">
+          </div>
+          <div class="form-group">
+            <label>Role</label>
+            <input type="text" id="jobRole" placeholder="e.g. Software Engineer">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Date Applied</label>
+            <input type="date" id="jobDate">
+          </div>
+          <div class="form-group">
+            <label>Status</label>
+            <select id="jobStatus">
+              <option value="Applied">Applied</option>
+              <option value="Phone Screen">Phone Screen</option>
+              <option value="Technical Interview">Technical Interview</option>
+              <option value="Final Round">Final Round</option>
+              <option value="Offer">Offer</option>
+              <option value="Rejected">Rejected</option>
+              <option value="Withdrawn">Withdrawn</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Salary Min ($)</label>
+            <input type="number" id="jobSalaryMin" placeholder="e.g. 120000">
+          </div>
+          <div class="form-group">
+            <label>Salary Max ($)</label>
+            <input type="number" id="jobSalaryMax" placeholder="e.g. 160000">
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Job URL</label>
+          <input type="url" id="jobUrl" placeholder="https://...">
+        </div>
+        <div class="form-group">
+          <label>Notes</label>
+          <textarea id="jobNotes" placeholder="Recruiter contact, interview notes, follow-up actions..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="modalCancel">Cancel</button>
+        <button class="btn-primary" id="saveJob">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

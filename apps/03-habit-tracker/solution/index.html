@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiro Habit Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">🌱 Habit Tracker</div>
+      <button class="add-btn" id="addHabitBtn">+ Add Habit</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="habits-list" id="habitsList"></div>
+    <div class="empty-state" id="emptyState" style="display:none">
+      <div class="empty-icon">🌱</div>
+      <div class="empty-title">No habits yet</div>
+      <div class="empty-sub">Click "Add Habit" to start tracking your first habit.</div>
+    </div>
+  </main>
+
+  <div class="modal-overlay" id="modalOverlay" style="display:none">
+    <div class="modal">
+      <div class="modal-header">
+        <div class="modal-title">New Habit</div>
+        <button class="modal-close" id="modalClose">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Habit Name</label>
+          <input type="text" id="habitName" placeholder="e.g. Morning Run">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Emoji</label>
+            <input type="text" id="habitEmoji" placeholder="💪" maxlength="2">
+          </div>
+          <div class="form-group">
+            <label>Frequency</label>
+            <select id="habitFreq">
+              <option value="Daily">Daily</option>
+              <option value="Weekdays">Weekdays</option>
+              <option value="Weekly">Weekly</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Color</label>
+          <div class="color-swatches" id="colorSwatches">
+            <div class="swatch active" data-color="#10b981" style="background:#10b981"></div>
+            <div class="swatch" data-color="#3b82f6" style="background:#3b82f6"></div>
+            <div class="swatch" data-color="#8b5cf6" style="background:#8b5cf6"></div>
+            <div class="swatch" data-color="#ef4444" style="background:#ef4444"></div>
+            <div class="swatch" data-color="#f59e0b" style="background:#f59e0b"></div>
+            <div class="swatch" data-color="#ec4899" style="background:#ec4899"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="modalCancel">Cancel</button>
+        <button class="btn-primary" id="saveHabit">Add Habit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
